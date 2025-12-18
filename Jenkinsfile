@@ -16,13 +16,13 @@ pipeline {
 
         stage('Build Step 2') {
             steps {
-                bat 'build1.bat'
+                bat 'Build2.bat'
             }
         }
 
         stage('Build Step 3') {
             steps {
-                bat 'build2.bat'
+                bat 'Build3.bat'
             }
         }
     }
