@@ -8,15 +8,21 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Build Step 1') {
             steps {
-                echo 'Build stage'
+                bat 'build.bat'
             }
         }
 
-        stage('Test') {
+        stage('Build Step 2') {
             steps {
-                echo 'Running tests'
+                bat 'build1.bat'
+            }
+        }
+
+        stage('Build Step 3') {
+            steps {
+                bat 'build2.bat'
             }
         }
     }
